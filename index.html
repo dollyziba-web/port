@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zee Eatery — Italian & International Fine Dining | Italy</title>
+  <meta name="description" content="Welcome to Zee Eatery, an Italian and international fine-dining destination in Italy. Where culinary passion meets timeless elegance.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' stroke='%23C49A45' stroke-width='4' fill='%23100A07'/><text x='50' y='64' font-family='serif' font-size='48' font-weight='bold' fill='%23D6B878' text-anchor='middle'>Z</text></svg>">
+  <link rel="stylesheet" href="css/luxury-tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="bg-espresso">
+
+  <!-- ========================================================================
+       NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Zee Eatery Home">
+        <div class="logo-symbol">Z</div>
+        <div class="logo-text-group">
+          <span class="logo-title">ZEE EATERY</span>
+          <span class="logo-sub">ITALIA &bull; FINE DINING</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Our Services</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Action Button & Mobile Hamburger -->
+      <div class="nav-actions">
+        <a href="contact.html#reservation" class="btn btn-gold btn-sm">Reserve a Table</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Our Services</a>
+      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </nav>
+    <a href="contact.html#reservation" class="btn btn-gold btn-lg">Reserve a Table</a>
+    <div class="mobile-menu-info">
+      <div>Fine Dining Destination &bull; Italy</div>
+      <a href="tel:+3909129129572">Tel: 09129129572</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- ========================================================================
+         SECTION 1: HERO SECTION
+         Full-width cinematic hero background reproducing the reference specification.
+         Headline, supporting copy, and CTA on the LEFT; woman dining integrated
+         naturally on the RIGHT. Preserves letter-level rising and continuous float animations.
+         ======================================================================== -->
+    <section class="hero-section hero-cinematic-bg" aria-label="Hero Introduction">
+      <div class="container hero-cinematic-container">
+        <div class="hero-content">
+          <span class="gold-eyebrow hero-fade-up delay-1">The Art of Fine Dining</span>
+          <h1 class="hero-headline hero-letter-anim">Where Every Bite Becomes an Experience.</h1>
+          <p class="hero-description hero-fade-up delay-3">
+            Discover a world of exceptional flavours, inspired by the timeless elegance of Italian cuisine and the richness of international gastronomy.
+          </p>
+          <div class="hero-cta-group hero-fade-up delay-4">
+            <a href="gallery.html" class="btn btn-gold">Discover Our Menu</a>
+            <a href="contact.html#reservation" class="btn btn-outline-gold">Reserve a Table</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 2: RESTAURANT INTRODUCTION
+         Split editorial layout introducing Zee Eatery's soul and heritage.
+         ======================================================================== -->
+    <section class="section bg-rich-brown" aria-label="Restaurant Story Introduction">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-visual reveal reveal-left">
+            <img src="assets/images/interior-dining-room.png" 
+                 alt="Opulent interior of Zee Eatery with crystal chandeliers, Roman architectural painting, and candlelit velvet seating" 
+                 class="intro-image"
+                 loading="lazy">
+            <div class="intro-accent-badge">
+              <span>Italia</span>
+              <small>Culinary Excellence</small>
+            </div>
+          </div>
+          <div class="intro-content reveal reveal-right">
+            <span class="gold-eyebrow">Our Philosophy</span>
+            <h2>An Italian Soul. A World of Flavours.</h2>
+            <div class="gold-divider" style="justify-content: flex-start; margin: 1.25rem 0;">
+              <span class="gold-divider-diamond">&#9670;</span>
+            </div>
+            <p>
+              At Zee Eatery, culinary tradition is honored not as a boundary, but as an inspiration. Rooted in the rich epicurean landscapes of Italy and illuminated by vibrant global gastronomy, our kitchen celebrates the purity of pristine ingredients and the artistry of modern execution.
+            </p>
+            <p>
+              From handcrafted artisanal pastas and prime cuts to delicately balanced Mediterranean seafood, every plate is prepared with exacting care, intention, and heartfelt Italian hospitality.
+            </p>
+            <div style="margin-top: 2rem;">
+              <a href="about.html" class="btn-text-gold">
+                <span>Our Story</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 3: SIGNATURE DISHES
+         STRICT RULE: Display ONLY TWO featured food items. NO prices. NO cart.
+         ======================================================================== -->
+    <section class="section bg-espresso" aria-label="Signature Dishes">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="gold-eyebrow">Signature Creations</span>
+          <h2>Crafted With Devotion</h2>
+          <div class="gold-divider">
+            <span class="gold-divider-diamond">&#9670;</span>
+          </div>
+          <p class="subtitle">
+            Two defining creations that capture the harmonious blend of Italian finesse and contemporary international flair.
+          </p>
+        </div>
+
+        <div class="signature-dishes-grid stagger-parent">
+          <!-- Dish 1: Grilled Chicken Steak -->
+          <article class="signature-dish-card stagger-child reveal reveal-left">
+            <div class="signature-dish-img-box">
+              <img src="assets/images/home-signature-steak.jpg" 
+                   alt="Gourmet Grilled Chicken Steak with charred asparagus, rosemary sprig, and velvety reduction" 
+                   loading="lazy">
+            </div>
+            <div class="signature-dish-info">
+              <span class="dish-badge">Main Course Selection</span>
+              <h3 class="dish-title">Grilled Chicken Steak</h3>
+              <p class="dish-desc">
+                Tender marinated poultry grilled to golden perfection over charcoal, accompanied by charred seasonal vegetables, silky potato purée, and a delicate herb-infused roasting jus.
+              </p>
+            </div>
+          </article>
+
+          <!-- Dish 2: Chicken Alfredo Pasta -->
+          <article class="signature-dish-card stagger-child reveal reveal-right">
+            <div class="signature-dish-img-box">
+              <img src="assets/images/home-signature-pasta.jpg" 
+                   alt="Artisanal Chicken Alfredo Pasta with freshly shaved 24-month Parmigiano-Reggiano and cracked black pepper" 
+                   loading="lazy">
+            </div>
+            <div class="signature-dish-info">
+              <span class="dish-badge">Italian Pasta Heritage</span>
+              <h3 class="dish-title">Chicken Alfredo Pasta</h3>
+              <p class="dish-desc">
+                Handcrafted egg fettuccine enrobed in a rich velvet emulsion of cultured butter and aged Parmigiano-Reggiano, layered with pan-seared chicken breast and freshly cracked black peppercorn.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center reveal">
+          <a href="gallery.html" class="btn btn-gold btn-lg">Discover Our Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 4: THE DINING EXPERIENCE
+         Fine dining sommelier service and ambient hospitality.
+         ======================================================================== -->
+    <section class="section bg-chocolate" aria-label="The Dining Experience">
+      <div class="container">
+        <div class="experience-grid">
+          <div class="experience-content reveal reveal-left">
+            <span class="gold-eyebrow">Atmosphere & Hospitality</span>
+            <h2>More Than a Meal. A Moment to Remember.</h2>
+            <div class="gold-divider" style="justify-content: flex-start; margin: 1.25rem 0;">
+              <span class="gold-divider-diamond">&#9670;</span>
+            </div>
+            <p>
+              Dining at Zee Eatery is an intimate multisensory narrative. From the gentle glow of ambient candlelight to the whisper of fine crystal and the warmth of genuine Italian hospitality, each touchpoint is meticulously orchestrated.
+            </p>
+            <div class="experience-highlights">
+              <div class="experience-item">
+                <h4>Sommelier Curation</h4>
+                <p>Prestigious vintage cellars featuring rare Italian reserves and renowned international terroirs.</p>
+              </div>
+              <div class="experience-item">
+                <h4>Artisanal Tablecraft</h4>
+                <p>Bespoke Italian linen, handcrafted porcelain, and hand-blown European glassware.</p>
+              </div>
+            </div>
+            <a href="services.html" class="btn btn-outline-gold">Experience Zee Eatery</a>
+          </div>
+
+          <div class="experience-visual reveal reveal-right">
+            <div class="editorial-frame frame-corner-gold" style="height: 480px;">
+              <img src="assets/images/home-experience-sommelier.jpg" 
+                   alt="Sommelier pouring vintage red wine at an intimate candlelit table at Zee Eatery" 
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 5: OUR SERVICES PREVIEW
+         4 refined preview cards: Fine Dining, Private Dining, Special Celebrations, Event Hosting.
+         ======================================================================== -->
+    <section class="section bg-rich-brown" aria-label="Services Overview">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="gold-eyebrow">Tailored Hospitality</span>
+          <h2>Exceptional Dining Services</h2>
+          <div class="gold-divider">
+            <span class="gold-divider-diamond">&#9670;</span>
+          </div>
+          <p class="subtitle">
+            Whether an intimate dinner for two, a private executive salon, or an opulent banquet, our dedicated team brings bespoke luxury to every occasion.
+          </p>
+        </div>
+
+        <div class="services-preview-grid stagger-parent">
+          <div class="service-preview-card stagger-child reveal">
+            <div class="service-preview-img-box">
+              <img src="assets/images/home-service-fine-dining.jpg" alt="Fine dining restaurant salon" loading="lazy">
+            </div>
+            <div class="service-preview-body">
+              <h3>Fine Dining</h3>
+              <p>Thoughtfully conceived multi-course tasting menus presented with graceful choreography and culinary finesse.</p>
+            </div>
+          </div>
+
+          <div class="service-preview-card stagger-child reveal">
+            <div class="service-preview-img-box">
+              <img src="assets/images/home-service-private.jpg" alt="Private dining suite" loading="lazy">
+            </div>
+            <div class="service-preview-body">
+              <h3>Private Dining</h3>
+              <p>Exclusive suites offering secluded sophistication, dedicated butler service, and tailored gastronomy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center reveal">
+          <a href="services.html" class="btn btn-outline-gold">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 6: GALLERY PREVIEW
+         STRICT RULE: Display ONLY TWO photographs (one plated meal, one dining setting).
+         ======================================================================== -->
+    <section class="section bg-espresso" aria-label="Gallery Preview">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="gold-eyebrow">Visual Preview</span>
+          <h2>A Glimpse Into Our World</h2>
+          <div class="gold-divider">
+            <span class="gold-divider-diamond">&#9670;</span>
+          </div>
+          <p class="subtitle">
+            A small taste of the visual splendour that awaits you inside our dining rooms and across our seasonal collections.
+          </p>
+        </div>
+
+        <div class="gallery-preview-grid">
+          <!-- Photo 1: Plated Gourmet Meal -->
+          <div class="gallery-preview-card reveal reveal-left">
+            <img src="assets/images/home-gallery-seabass.jpg" alt="Pan-seared Chilean sea bass with saffron velouté and garden garnishes" loading="lazy">
+            <div class="gallery-preview-caption">Pan-Seared Sea Bass &bull; Mediterranean Seafood</div>
+          </div>
+
+          <!-- Photo 2: Dining Setting -->
+          <div class="gallery-preview-card reveal reveal-right">
+            <img src="assets/images/home-gallery-terrace.jpg" alt="Evening alfresco dining terrace illuminated by warm lanterns" loading="lazy">
+            <div class="gallery-preview-caption">Evening Garden Terrace &bull; Intimate Alfresco Dining</div>
+          </div>
+        </div>
+
+        <div class="text-center reveal">
+          <a href="gallery.html" class="btn btn-gold btn-lg">View Our Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 8: TESTIMONIALS
+         Visual Variation: Warm Ivory Section Background (#F3EBDD)
+         Clean placeholder testimonials clearly labelled for editorial review.
+         ======================================================================== -->
+    <section class="section bg-warm-ivory" aria-label="Guest Testimonials">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="gold-eyebrow">Guest Reflections</span>
+          <h2>Memorable Evenings</h2>
+          <div class="gold-divider">
+            <span class="gold-divider-diamond">&#9670;</span>
+          </div>
+          <p class="subtitle" style="color: #614C3E;">
+            Curated guest impressions reflecting the warmth, culinary artistry, and graceful hospitality of Zee Eatery.
+          </p>
+        </div>
+
+        <div class="testimonials-grid stagger-parent">
+          <div class="testimonial-card stagger-child reveal">
+            <div class="testimonial-quote-icon">&ldquo;</div>
+            <p class="testimonial-text">
+              The balance of authentic Italian heart and worldly culinary nuance is rare to behold. From the very first bite of pasta to the final dessert, the dinner was absolute poetry.
+            </p>
+            <div class="testimonial-author-box">
+              <span class="testimonial-author-name">Guest Reflection</span>
+              <span class="testimonial-author-tag">Private Dining &bull; Rome</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card stagger-child reveal">
+            <div class="testimonial-quote-icon">&ldquo;</div>
+            <p class="testimonial-text">
+              Zee Eatery has elevated the standard of evening dining in Italy. The sommelier pairing was extraordinary, and the ambiance was both deeply intimate and effortlessly grand.
+            </p>
+            <div class="testimonial-author-box">
+              <span class="testimonial-author-name">Guest Reflection</span>
+              <span class="testimonial-author-tag">Anniversary Evening &bull; Milan</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card stagger-child reveal">
+            <div class="testimonial-quote-icon">&ldquo;</div>
+            <p class="testimonial-text">
+              An unforgettable culinary journey. The discreet attentiveness of the team and the breathtaking presentation made our celebration one we will treasure for years.
+            </p>
+            <div class="testimonial-author-box">
+              <span class="testimonial-author-name">Guest Reflection</span>
+              <span class="testimonial-author-tag">Executive Dinner &bull; Florence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 9: RESERVATION CALL TO ACTION
+         ======================================================================== -->
+    <section class="section cta-banner-section" aria-label="Table Reservation CTA">
+      <div class="cta-banner-bg" style="background-image: url('assets/images/home-reservation-bg.jpg');"></div>
+      <div class="container">
+        <div class="cta-banner-content reveal">
+          <span class="gold-eyebrow">Join Us This Evening</span>
+          <h2>Your Table Awaits.</h2>
+          <p>
+            An exceptional dining experience is only a reservation away. We invite you to join us for an evening of warmth, beauty, and culinary distinction.
+          </p>
+          <a href="contact.html#reservation" class="btn btn-gold btn-lg">Reserve Your Table</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       SECTION 10: FOOTER
+       Deep espresso background, elegant gold dividers, working telephone & email.
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Zee Eatery Home">
+            <div class="logo-symbol">Z</div>
+            <div class="logo-text-group">
+              <span class="logo-title">ZEE EATERY</span>
+              <span class="logo-sub">ITALIA &bull; FINE DINING</span>
+            </div>
+          </a>
+          <p>
+            Italian and international fine dining in Italy. Committed to culinary excellence, graceful hospitality, and unforgettable moments around the table.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Our Services</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="contact.html#reservation" class="footer-link">Table Reservations</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Hours & Dining -->
+        <div>
+          <h4 class="footer-heading">Dining Hours</h4>
+          <ul class="footer-links" style="color: var(--color-muted-sand); font-size: 0.9rem;">
+            <li><strong style="color: var(--color-warm-ivory);">Monday &ndash; Friday</strong><br>12:00 PM &ndash; 3:30 PM<br>6:30 PM &ndash; 11:30 PM</li>
+            <li style="margin-top: 0.75rem;"><strong style="color: var(--color-warm-ivory);">Saturday &ndash; Sunday</strong><br>12:00 PM &ndash; Midnight</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Location -->
+        <div>
+          <h4 class="footer-heading">Direct Contact</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-champagne-gold);">Telephone</div>
+              <a href="tel:+3909129129572">09129129572</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-champagne-gold);">Email Enquiries</div>
+              <a href="mailto:dollyziba@gmail.com">dollyziba@gmail.com</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-champagne-gold);">Location</div>
+              <span>Italy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; <span class="current-year">2026</span> Zee Eatery. All rights reserved. Fine Dining Hospitality.
+        </div>
+        <div class="footer-italy-badge">
+          <span>Ristorante di Lusso</span> &bull; <span>Italia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING WHATSAPP BUTTON (ESSENTIAL REQUIREMENT)
+       Opens conversation with 09129129572 formatted as https://wa.me/3909129129572
+       ======================================================================== -->
+  <a href="https://wa.me/3909129129572" 
+     class="whatsapp-float-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat with Zee Eatery on WhatsApp">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <div class="whatsapp-float-icon-box">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- JavaScript Modules -->
+  <script src="js/main.js"></script>
+  <script src="js/hero-anim.js"></script>
+</body>
+</html>

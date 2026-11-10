@@ -1,0 +1,291 @@
+/* ==========================================================================
+   ZEE EATERY — BASE STYLES & LUXURY TYPOGRAPHY
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-espresso);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-text-body);
+  background-color: var(--color-espresso);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-espresso);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-antique-gold) 0%, var(--color-chocolate) 100%);
+  border-radius: 4px;
+  border: 2px solid var(--color-espresso);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-champagne-gold);
+}
+
+/* Text Selection */
+::selection {
+  background-color: var(--color-antique-gold);
+  color: var(--color-espresso);
+}
+::-moz-selection {
+  background-color: var(--color-antique-gold);
+  color: var(--color-espresso);
+}
+
+/* Base Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-warm-ivory);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-size: 1.025rem;
+  color: var(--color-text-body);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+}
+
+.container-wide {
+  max-width: 1480px;
+}
+
+/* Section Containers & Backgrounds */
+.section {
+  position: relative;
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+  overflow: hidden;
+}
+
+.section-dense {
+  padding-top: clamp(3rem, 5vw, 5rem);
+  padding-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+/* Intentional Background Variations as requested by prompt */
+.bg-espresso {
+  background-color: var(--color-espresso);
+  color: var(--color-text-body);
+}
+
+.bg-rich-brown {
+  background-color: var(--color-rich-brown);
+  color: var(--color-text-body);
+}
+
+.bg-chocolate {
+  background-color: var(--color-chocolate);
+  color: var(--color-text-body);
+}
+
+.bg-warm-ivory {
+  background-color: var(--color-warm-ivory);
+  color: var(--color-espresso);
+}
+
+.bg-warm-ivory h1,
+.bg-warm-ivory h2,
+.bg-warm-ivory h3,
+.bg-warm-ivory h4 {
+  color: var(--color-espresso);
+}
+
+.bg-warm-ivory p {
+  color: #38251C;
+}
+
+.bg-warm-ivory .gold-eyebrow {
+  color: #8C6A28;
+}
+
+.bg-warm-ivory .gold-divider::before,
+.bg-warm-ivory .gold-divider::after {
+  background: linear-gradient(90deg, transparent, rgba(140, 106, 40, 0.4), transparent);
+}
+
+/* Decorative Gold Eyebrows */
+.gold-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--color-champagne-gold);
+  margin-bottom: 1.25rem;
+}
+
+.gold-eyebrow::before,
+.gold-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--color-antique-gold);
+  opacity: 0.75;
+}
+
+.gold-eyebrow.no-after::after {
+  display: none;
+}
+
+/* Subtle Gold Divider */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.gold-divider::before,
+.gold-divider::after {
+  content: '';
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-border), transparent);
+}
+
+.gold-divider-diamond {
+  color: var(--color-antique-gold);
+  font-size: 0.7rem;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+/* Header Text Alignments */
+.text-center {
+  text-align: center;
+}
+
+.text-center .gold-eyebrow {
+  justify-content: center;
+}
+
+.section-header {
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.section-header p.subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 680px;
+  margin: 1rem auto 0;
+  line-height: 1.8;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-champagne-gold);
+  outline-offset: 3px;
+}

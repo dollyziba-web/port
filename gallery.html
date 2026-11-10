@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Culinary Collections & Ambiance | Zee Eatery Italy</title>
+  <meta name="description" content="Explore the gastronomic showcase of Zee Eatery in Italy: Italian pastas, wood-fired pizzas, gourmet steaks, seafood delicacies, desserts, and atmospheric dining.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' stroke='%23C49A45' stroke-width='4' fill='%23100A07'/><text x='50' y='64' font-family='serif' font-size='48' font-weight='bold' fill='%23D6B878' text-anchor='middle'>Z</text></svg>">
+  <link rel="stylesheet" href="css/luxury-tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="bg-espresso">
+
+  <!-- ========================================================================
+       NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Zee Eatery Home">
+        <div class="logo-symbol">Z</div>
+        <div class="logo-text-group">
+          <span class="logo-title">ZEE EATERY</span>
+          <span class="logo-sub">ITALIA &bull; FINE DINING</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Our Services</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html#reservation" class="btn btn-gold btn-sm">Reserve a Table</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Our Services</a>
+      <a href="gallery.html" class="mobile-nav-link active">Gallery</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </nav>
+    <a href="contact.html#reservation" class="btn btn-gold btn-lg">Reserve a Table</a>
+    <div class="mobile-menu-info">
+      <div>Fine Dining Destination &bull; Italy</div>
+      <a href="tel:+3909129129572">Tel: 09129129572</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- ========================================================================
+         PAGE HERO
+         ======================================================================== -->
+    <header class="page-hero">
+      <div class="page-hero-bg" style="background-image: url('assets/images/gallery-hero.jpg');"></div>
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content reveal">
+        <span class="gold-eyebrow">Culinary Showcase</span>
+        <h1>The Visual Collection</h1>
+        <p>
+          An immersive photographic journey through handcrafted pastas, gourmet prime cuts, ocean-fresh seafood, artisanal desserts, and candlelit ambiance.
+        </p>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+         GALLERY FILTER & GRID SECTION
+         Working category filters and full-featured lightbox modal.
+         STRICT RULE: NO prices anywhere. NO cart buttons.
+         ======================================================================== -->
+    <section class="section bg-espresso" aria-label="Gastronomic Gallery">
+      <div class="container">
+        <!-- Interactive Category Filters -->
+        <div class="gallery-filter-bar reveal" role="toolbar" aria-label="Gallery category filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="italian">Italian Cuisine</button>
+          <button class="filter-btn" data-filter="mains">Main Courses</button>
+          <button class="filter-btn" data-filter="pasta-pizza">Pasta &amp; Pizza</button>
+          <button class="filter-btn" data-filter="seafood">Seafood</button>
+          <button class="filter-btn" data-filter="desserts">Desserts</button>
+          <button class="filter-btn" data-filter="beverages">Beverages</button>
+          <button class="filter-btn" data-filter="atmosphere">Dining Atmosphere</button>
+        </div>
+
+        <!-- Gallery Editorial Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+
+          <!-- 1. Beef Lasagna -->
+          <article class="gallery-item" data-category="italian pasta-pizza mains" tabindex="0" role="button" aria-label="View Classic Beef Lasagna">
+            <img src="assets/images/dish-beef-lasagna.jpg" alt="Artisanal baked Beef Lasagna with rich slow-cooked ragù Bolognese and golden crust" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Italian Heritage &bull; Pasta</span>
+              <h3 class="gallery-item-title">Classic Beef Lasagna</h3>
+              <p class="gallery-item-desc">Slow-simmered prime beef ragù Bolognese, velvety silky béchamel, and melted aged Parmigiano-Reggiano.</p>
+            </div>
+          </article>
+
+          <!-- 2. Seafood Pasta -->
+          <article class="gallery-item" data-category="italian pasta-pizza seafood" tabindex="0" role="button" aria-label="View Seafood Linguine allo Scoglio">
+            <img src="assets/images/dish-seafood-pasta.jpg" alt="Seafood Pasta with calamari, prawns, and Mediterranean mussels in white wine reduction" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Seafood &bull; Pasta</span>
+              <h3 class="gallery-item-title">Seafood Pasta allo Scoglio</h3>
+              <p class="gallery-item-desc">Bronze-cut linguine tossed with wild king prawns, mussels, calamari, fresh cherry tomatoes, and cold-pressed olive oil.</p>
+            </div>
+          </article>
+
+          <!-- 3. Penne all'Arrabbiata -->
+          <article class="gallery-item" data-category="italian pasta-pizza" tabindex="0" role="button" aria-label="View Penne all'Arrabbiata">
+            <img src="assets/images/dish-penne-arrabbiata.jpg" alt="Penne all'Arrabbiata with spicy San Marzano tomato sauce, garlic, and fresh basil" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Roman Classic &bull; Pasta</span>
+              <h3 class="gallery-item-title">Penne all'Arrabbiata</h3>
+              <p class="gallery-item-desc">Fiery San Marzano plum tomatoes, roasted garlic, Calabrian chili flakes, and torn sweet basil leaves.</p>
+            </div>
+          </article>
+
+          <!-- 4. Artisanal Margherita Pizza -->
+          <article class="gallery-item" data-category="italian pasta-pizza" tabindex="0" role="button" aria-label="View Artisanal Margherita Pizza">
+            <img src="assets/images/dish-margherita-pizza.jpg" alt="Wood-fired Margherita Pizza with bubbling buffalo mozzarella and fresh sweet basil" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Wood-Fired Hearth &bull; Pizza</span>
+              <h3 class="gallery-item-title">Artisanal Margherita Pizza</h3>
+              <p class="gallery-item-desc">72-hour naturally fermented dough baked at 450°C with Campanian buffalo mozzarella and crushed San Marzano DOP.</p>
+            </div>
+          </article>
+
+          <!-- 5. Truffle & Wild Mushroom Pizza -->
+          <article class="gallery-item" data-category="italian pasta-pizza" tabindex="0" role="button" aria-label="View Truffle and Wild Mushroom Pizza">
+            <img src="assets/images/dish-truffle-pizza.jpg" alt="Gourmet Truffle and Wild Mushroom Pizza with shaved black truffle and thyme" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Chef Creation &bull; Pizza</span>
+              <h3 class="gallery-item-title">Truffle &amp; Wild Funghi Pizza</h3>
+              <p class="gallery-item-desc">Charred sourdough crust layered with roasted porcini, fontina, fior di latte, and shaved Norcia black winter truffle.</p>
+            </div>
+          </article>
+
+          <!-- 6. Handcrafted Pesto Gnocchi -->
+          <article class="gallery-item" data-category="italian pasta-pizza" tabindex="0" role="button" aria-label="View Pesto Genovese Gnocchi">
+            <img src="assets/images/dish-pesto-gnocchi.jpg" alt="Pillowy potato gnocchi with vibrant basil pesto Genovese and toasted pine nuts" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Ligurian Craft &bull; Pasta</span>
+              <h3 class="gallery-item-title">Creamy Pesto Gnocchi</h3>
+              <p class="gallery-item-desc">Handmade golden potato dumplings tossed in mortar-ground sweet Genovese basil, toasted pine nuts, and pecorino.</p>
+            </div>
+          </article>
+
+          <!-- 7. Grilled Beef Tenderloin Steak -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Grilled Beef Tenderloin Steak">
+            <img src="assets/images/dish-beef-tenderloin.jpg" alt="Prime Grilled Beef Tenderloin Steak with charred crust, rosemary butter, and roasted garlic" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Butcher Selection &bull; Mains</span>
+              <h3 class="gallery-item-title">Grilled Beef Tenderloin Steak</h3>
+              <p class="gallery-item-desc">Prime grass-fed cut seared over charcoal, basted with rosemary bone marrow butter and finished with flake sea salt.</p>
+            </div>
+          </article>
+
+          <!-- 8. Wood-Smoked BBQ Chicken Supreme -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View BBQ Chicken Supreme">
+            <img src="assets/images/dish-bbq-chicken.jpg" alt="Glazed Wood-Smoked BBQ Chicken Supreme with caramelized char and aromatic spices" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Rotisserie Specialty &bull; Mains</span>
+              <h3 class="gallery-item-title">BBQ Chicken Supreme</h3>
+              <p class="gallery-item-desc">Free-range chicken breast glazed in a house-made smoked dark amber reduction, served with charred baby onions.</p>
+            </div>
+          </article>
+
+          <!-- 9. Crispy Golden Fried Chicken Fillets -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Crispy Fried Chicken">
+            <img src="assets/images/dish-crispy-chicken.jpg" alt="Crispy Fried Chicken cutlets with spiced golden crumb and creamy dipping sauce" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Crispy Selection &bull; Mains</span>
+              <h3 class="gallery-item-title">Crispy Fried Chicken</h3>
+              <p class="gallery-item-desc">Marinated tender fillets double-crusted in seasoned artisan breadcrumbs, served alongside honey-dijon aioli.</p>
+            </div>
+          </article>
+
+          <!-- 10. Herb-Crusted Lamb Chops -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Herb-Crusted Lamb Chops">
+            <img src="assets/images/dish-lamb-chops.jpg" alt="Pan-seared Lamb Chops crusted with fresh mint, thyme, and roasted garlic" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Chef Reserve &bull; Mains</span>
+              <h3 class="gallery-item-title">Herb-Crusted Lamb Chops</h3>
+              <p class="gallery-item-desc">Tender French-trimmed chops seared medium-rare with a fragrant crust of crushed pistachios, mint, and Chianti glaze.</p>
+            </div>
+          </article>
+
+          <!-- 11. Royal Chicken Biryani -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Royal Chicken Biryani">
+            <img src="assets/images/dish-chicken-biryani.jpg" alt="Fragrant Chicken Biryani with long-grain aged basmati, saffron, and caramelized onions" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">International Gastronomy &bull; Rice</span>
+              <h3 class="gallery-item-title">Royal Chicken Biryani</h3>
+              <p class="gallery-item-desc">Aged basmati rice steamed under sealed dum with Kashmiri saffron, tender chicken pieces, green cardamom, and crispy shallots.</p>
+            </div>
+          </article>
+
+          <!-- 12. Mutton Dum Biryani -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Mutton Biryani">
+            <img src="assets/images/dish-mutton-biryani.jpg" alt="Rich slow-cooked Mutton Biryani presented in traditional copper pot with fresh herbs" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">International Gastronomy &bull; Rice</span>
+              <h3 class="gallery-item-title">Mutton Biryani</h3>
+              <p class="gallery-item-desc">Slow-simmered tender lamb layered with fragrant saffron-infused rice, whole star anise, clove, and spiced aromatics.</p>
+            </div>
+          </article>
+
+          <!-- 13. Wok-Tossed Chicken Chowmein -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Chicken Chowmein">
+            <img src="assets/images/dish-chicken-chowmein.jpg" alt="Wok-tossed Chicken Chowmein noodles with julienned vegetables and sesame" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">International Gastronomy &bull; Noodles</span>
+              <h3 class="gallery-item-title">Chicken Chowmein</h3>
+              <p class="gallery-item-desc">High-heat wok-tossed egg noodles with sliced chicken, crisp market greens, garlic chives, and aged dark soy sauce.</p>
+            </div>
+          </article>
+
+          <!-- 14. Steamed Chicken Momos -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Steamed Chicken Momos">
+            <img src="assets/images/dish-chicken-momos.jpg" alt="Handcrafted steamed Chicken Momos with artisanal spicy chili dipping sauce" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Artisan Dim Sum &bull; Mains</span>
+              <h3 class="gallery-item-title">Chicken Steam Momos</h3>
+              <p class="gallery-item-desc">Delicately pleated dough pockets filled with ginger-scented minced chicken, accompanied by roasted tomato sesame chutney.</p>
+            </div>
+          </article>
+
+          <!-- 15. Gourmet Chicken Panini Sandwich -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Gourmet Chicken Sandwich">
+            <img src="assets/images/dish-chicken-sandwich.jpg" alt="Grilled Chicken Sandwich on artisan sourdough with melted provolone and arugula" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Bistro Collection &bull; Mains</span>
+              <h3 class="gallery-item-title">Chicken Club Sandwich</h3>
+              <p class="gallery-item-desc">Charred sourdough panini filled with rosemary grilled chicken breast, smoked provolone, wild rocket, and sundried tomato tapenade.</p>
+            </div>
+          </article>
+
+          <!-- 16. Savory Chicken Rolls -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Savory Chicken Rolls">
+            <img src="assets/images/dish-chicken-rolls.jpg" alt="Hand-rolled savory Chicken Roll wrap with garlic herb emulsion and pickled onions" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Artisan Wraps &bull; Mains</span>
+              <h3 class="gallery-item-title">Chicken Roll</h3>
+              <p class="gallery-item-desc">Freshly griddled flatbread wrapped around spiced chicken breast, crispy shallots, cucumber ribbons, and mild mint sauce.</p>
+            </div>
+          </article>
+
+          <!-- 17. Jumbo Grilled King Prawns -->
+          <article class="gallery-item" data-category="seafood mains" tabindex="0" role="button" aria-label="View Jumbo Grilled Prawns">
+            <img src="assets/images/dish-grilled-prawns.jpg" alt="Charred Jumbo Grilled Prawns with garlic herb emulsion and lemon wedges" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Mediterranean Catch &bull; Seafood</span>
+              <h3 class="gallery-item-title">Grilled Prawns</h3>
+              <p class="gallery-item-desc">Fresh jumbo king prawns flame-grilled in their shells, brushed with lemon zest, pressed garlic, and Italian flat-leaf parsley.</p>
+            </div>
+          </article>
+
+          <!-- 18. Butter Garlic Prawns -->
+          <article class="gallery-item" data-category="seafood" tabindex="0" role="button" aria-label="View Butter Garlic Prawns">
+            <img src="assets/images/dish-garlic-prawns.jpg" alt="Butter Garlic Prawns simmering in white wine emulsion with fresh herbs" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Seafood Signature</span>
+              <h3 class="gallery-item-title">Butter Garlic Prawns</h3>
+              <p class="gallery-item-desc">Sweet gulf prawns gently sautéed in clarified farm butter, dry white Pinot Grigio, minced sweet garlic, and chives.</p>
+            </div>
+          </article>
+
+          <!-- 19. Grand Mediterranean Seafood Platter -->
+          <article class="gallery-item" data-category="seafood" tabindex="0" role="button" aria-label="View Seafood Platter">
+            <img src="assets/images/dish-seafood-platter.jpg" alt="Chilled Mediterranean Seafood Platter with fresh lobster, oysters, and prawns" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Raw Bar &bull; Seafood</span>
+              <h3 class="gallery-item-title">Fresh Seafood Platter</h3>
+              <p class="gallery-item-desc">A seasonal showcase of pristine Tyrrhenian oysters, sweet slipper lobster tails, prawns, and chilled citrus mignonette.</p>
+            </div>
+          </article>
+
+          <!-- 20. Warm Chocolate Lava Cake -->
+          <article class="gallery-item" data-category="desserts" tabindex="0" role="button" aria-label="View Chocolate Lava Cake">
+            <img src="assets/images/dish-chocolate-lava.jpg" alt="Warm Chocolate Lava Cake with flowing molten dark center and vanilla bean gelato" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Pastry Atelier &bull; Desserts</span>
+              <h3 class="gallery-item-title">Chocolate Lava Cake</h3>
+              <p class="gallery-item-desc">Baked Valrhona 70% dark chocolate fondant with a rich molten center, served with house-churned Madagascar vanilla gelato.</p>
+            </div>
+          </article>
+
+          <!-- 21. Traditional Venetian Tiramisù -->
+          <article class="gallery-item" data-category="italian desserts" tabindex="0" role="button" aria-label="View Traditional Tiramisù">
+            <img src="assets/images/dish-tiramisu.jpg" alt="Traditional Italian Tiramisù with espresso-dipped savoiardi and velvety mascarpone" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Venetian Classic &bull; Desserts</span>
+              <h3 class="gallery-item-title">Traditional Tiramisù</h3>
+              <p class="gallery-item-desc">Savoiardi ladyfingers steeped in single-origin Italian espresso and Marsala, whipped mascarpone, dusted with bitter cocoa.</p>
+            </div>
+          </article>
+
+          <!-- 22. New York Berry Cheesecake -->
+          <article class="gallery-item" data-category="desserts" tabindex="0" role="button" aria-label="View Berry Cheesecake">
+            <img src="assets/images/dish-cheesecake.jpg" alt="Silky New York Cheesecake with fresh wild blackberry and raspberry compote" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Pastry Atelier &bull; Desserts</span>
+              <h3 class="gallery-item-title">Cheesecake</h3>
+              <p class="gallery-item-desc">Slow-baked cream cheese and mascarpone cake over a buttered biscuit crust, crowned with wild alpine berry reduction.</p>
+            </div>
+          </article>
+
+          <!-- 23. Signature Blue Lagoon Mocktail -->
+          <article class="gallery-item" data-category="beverages" tabindex="0" role="button" aria-label="View Blue Lagoon Mocktail">
+            <img src="assets/images/dish-blue-lagoon.jpg" alt="Vibrant Blue Lagoon and Sunrise Mocktails with citrus garnish and crushed ice" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Mixology &bull; Beverages</span>
+              <h3 class="gallery-item-title">Blue Lagoon Mocktail</h3>
+              <p class="gallery-item-desc">Non-alcoholic curacao cordial, fresh key lime juice, sparkling botanical tonic, and candied rosemary sprig.</p>
+            </div>
+          </article>
+
+          <!-- 24. Virgin Mojito & Fresh Mint Lemonade -->
+          <article class="gallery-item" data-category="beverages" tabindex="0" role="button" aria-label="View Virgin Mojito">
+            <img src="assets/images/dish-virgin-mojito.jpg" alt="Crisp Virgin Mojito with muddled fresh spearmint, lime, and crushed ice" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Refreshment &bull; Beverages</span>
+              <h3 class="gallery-item-title">Virgin Mojito</h3>
+              <p class="gallery-item-desc">Muddled wild garden mint, Sicilian lemon juice, raw cane sugar syrup, and effervescent sparkling mineral water.</p>
+            </div>
+          </article>
+
+          <!-- 25. Fresh Pressed Fruit Juices -->
+          <article class="gallery-item" data-category="beverages" tabindex="0" role="button" aria-label="View Fresh Fruit Juices">
+            <img src="assets/images/dish-fresh-juices.jpg" alt="Artisanal trio of fresh pressed seasonal fruit juices" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Natural Nectars &bull; Beverages</span>
+              <h3 class="gallery-item-title">Fresh Juices</h3>
+              <p class="gallery-item-desc">Daily cold-pressed seasonal fruits: sweet Alfonso mango, Mediterranean watermelon, and Valencia orange.</p>
+            </div>
+          </article>
+
+          <!-- 26. Artisanal Italian Espresso & Cappuccino -->
+          <article class="gallery-item" data-category="italian beverages" tabindex="0" role="button" aria-label="View Artisanal Coffee">
+            <img src="assets/images/dish-hot-coffee.jpg" alt="Steaming artisanal Italian Cappuccino with delicate rosetta latte art in fine porcelain" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Torrefazione &bull; Hot Beverages</span>
+              <h3 class="gallery-item-title">Hot Beverages</h3>
+              <p class="gallery-item-desc">Single-estate Arabica roast extracted with manual lever precision; silky microfoam cappuccino and rich ristretto.</p>
+            </div>
+          </article>
+
+          <!-- 27. Hand-Cut Truffle Herb Fries -->
+          <article class="gallery-item" data-category="mains" tabindex="0" role="button" aria-label="View Truffle Fries">
+            <img src="assets/images/dish-truffle-fries.jpg" alt="Crispy golden French fries tossed with white truffle oil, rosemary, and parmesan" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Accompaniments &bull; Sides</span>
+              <h3 class="gallery-item-title">French Fries</h3>
+              <p class="gallery-item-desc">Triple-cooked golden potato batons tossed with aromatic white truffle oil, sea salt flakes, and minced rosemary.</p>
+            </div>
+          </article>
+
+          <!-- 28. Candlelit Wine Cellar Tasting -->
+          <article class="gallery-item" data-category="atmosphere" tabindex="0" role="button" aria-label="View Wine Cellar Atmosphere">
+            <img src="assets/images/atmosphere-wine-dinner.jpg" alt="Atmospheric candlelit dining setting inside historic stone Italian wine cellar" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Atmosphere &bull; Interior</span>
+              <h3 class="gallery-item-title">Candlelit Vault Dinner</h3>
+              <p class="gallery-item-desc">Historic brickwork, vintage bottles, and the intimate amber glow of candles set for an evening of culinary discovery.</p>
+            </div>
+          </article>
+
+          <!-- 29. Alfresco Evening Piazza Ambiance -->
+          <article class="gallery-item" data-category="atmosphere" tabindex="0" role="button" aria-label="View Terrace Ambiance">
+            <img src="assets/images/atmosphere-terrace-night.jpg" alt="Evening restaurant terrace in Italy with warm illuminated arches and convivial guests" loading="lazy">
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Atmosphere &bull; Alfresco</span>
+              <h3 class="gallery-item-title">Evening Terrace</h3>
+              <p class="gallery-item-desc">Dine under the Italian twilight skies surrounded by classical architectural arches and warm ambient illumination.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         RESERVATION CALL TO ACTION
+         ======================================================================== -->
+    <section class="section bg-chocolate text-center" aria-label="Gallery Reservation CTA">
+      <div class="container reveal">
+        <span class="gold-eyebrow">Experience the Flavours</span>
+        <h2>Reserve Your Dining Journey</h2>
+        <div class="gold-divider">
+          <span class="gold-divider-diamond">&#9670;</span>
+        </div>
+        <p class="subtitle" style="margin-bottom: 2.5rem;">
+          Join us in Italy to taste these signature culinary creations prepared fresh by our dedicated culinary brigade.
+        </p>
+        <a href="contact.html#reservation" class="btn btn-gold btn-lg">Reserve a Table</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       LIGHTBOX MODAL COMPONENT
+       ======================================================================== -->
+  <div class="lightbox-modal" id="luxuryLightbox" role="dialog" aria-modal="true" aria-label="Expanded Gallery View">
+    <button class="lightbox-close" aria-label="Close Lightbox">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <button class="lightbox-btn prev" aria-label="Previous Image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="lightbox-btn next" aria-label="Next Image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+
+    <div class="lightbox-content-wrapper">
+      <div class="lightbox-img-box">
+        <img src="" alt="">
+      </div>
+      <div class="lightbox-caption-bar">
+        <div class="lightbox-category"></div>
+        <h2 class="lightbox-title"></h2>
+        <p class="lightbox-desc"></p>
+        <div class="lightbox-counter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Zee Eatery Home">
+            <div class="logo-symbol">Z</div>
+            <div class="logo-text-group">
+              <span class="logo-title">ZEE EATERY</span>
+              <span class="logo-sub">ITALIA &bull; FINE DINING</span>
+            </div>
+          </a>
+          <p>
+            Italian and international fine dining in Italy. Committed to culinary excellence, graceful hospitality, and unforgettable moments around the table.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Our Services</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="contact.html#reservation" class="footer-link">Table Reservations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Dining Hours</h4>
+          <ul class="footer-links" style="color: var(--color-muted-sand); font-size: 0.9rem;">
+            <li><strong style="color: var(--color-warm-ivory);">Monday &ndash; Friday</strong><br>12:00 PM &ndash; 3:30 PM<br>6:30 PM &ndash; 11:30 PM</li>
+            <li style="margin-top: 0.75rem;"><strong style="color: var(--color-warm-ivory);">Saturday &ndash; Sunday</strong><br>12:00 PM &ndash; Midnight</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Direct Contact</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-champagne-gold);">Telephone</div>
+              <a href="tel:+3909129129572">09129129572</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-champagne-gold);">Email Enquiries</div>
+              <a href="mailto:dollyziba@gmail.com">dollyziba@gmail.com</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-champagne-gold);">Location</div>
+              <span>Italy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; <span class="current-year">2026</span> Zee Eatery. All rights reserved. Fine Dining Hospitality.
+        </div>
+        <div class="footer-italy-badge">
+          <span>Ristorante di Lusso</span> &bull; <span>Italia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/3909129129572" 
+     class="whatsapp-float-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat with Zee Eatery on WhatsApp">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <div class="whatsapp-float-icon-box">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

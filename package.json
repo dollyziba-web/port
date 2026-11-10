@@ -1,0 +1,20 @@
+{
+  "name": "zee-eatery",
+  "version": "1.0.0",
+  "description": "Zee Eatery — Italian & International Fine Dining Restaurant Website (Italy)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "restaurant",
+    "fine-dining",
+    "luxury",
+    "italian-cuisine",
+    "italy",
+    "editorial"
+  ],
+  "author": "Zee Eatery",
+  "license": "ISC"
+}

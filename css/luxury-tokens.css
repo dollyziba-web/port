@@ -1,0 +1,90 @@
+/* ==========================================================================
+   ZEE EATERY — LUXURY DESIGN SYSTEM TOKENS
+   Italian & International Fine Dining • Italy
+   ========================================================================== */
+
+:root {
+  /* Brand Core Color Palette */
+  --color-espresso: #100A07;
+  --color-rich-brown: #24130C;
+  --color-chocolate: #3A2115;
+  --color-mocha-deep: #1A0F09;
+  --color-warm-ebony: #150D09;
+  --color-slate-dark: #1E120B;
+
+  /* Gold Accents & Highlights */
+  --color-antique-gold: #C49A45;
+  --color-champagne-gold: #D6B878;
+  --color-pale-gold: #E8D3A7;
+  --color-deep-gold: #9E7A31;
+  --color-gold-glow: rgba(196, 154, 69, 0.35);
+  --color-gold-border: rgba(196, 154, 69, 0.28);
+  --color-gold-border-light: rgba(214, 184, 120, 0.18);
+  --color-gold-border-bright: rgba(214, 184, 120, 0.65);
+
+  /* Light & Text Colors */
+  --color-warm-ivory: #F3EBDD;
+  --color-cream: #FAF6F0;
+  --color-muted-sand: #D9CEBE;
+  --color-soft-gray: #A89B8C;
+  --color-text-dark: #100A07;
+  --color-text-body: #E8DFD0;
+  --color-text-muted: #B8AA98;
+
+  /* Background Variations for Sections */
+  --bg-espresso: #100A07;
+  --bg-rich-brown: #24130C;
+  --bg-chocolate: #3A2115;
+  --bg-warm-ivory: #F3EBDD;
+  --bg-card-dark: rgba(36, 19, 12, 0.7);
+  --bg-card-hover: rgba(58, 33, 21, 0.85);
+  --bg-glass-espresso: rgba(16, 10, 7, 0.85);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Garamond, 'Playfair Display', Georgia, serif;
+  --font-sans: 'Montserrat', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-medium: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-luxury: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+  --spacing-4xl: 8rem;
+
+  /* Layout */
+  --container-max: 1320px;
+  --container-narrow: 1080px;
+  --navbar-height: 90px;
+  --navbar-height-scrolled: 76px;
+
+  /* Shadows */
+  --shadow-subtle: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 15px 40px rgba(0, 0, 0, 0.45);
+  --shadow-gold-glow: 0 0 25px rgba(196, 154, 69, 0.25);
+  --shadow-gold-button: 0 4px 20px rgba(196, 154, 69, 0.35);
+  --shadow-lightbox: 0 25px 60px rgba(0, 0, 0, 0.85);
+
+  /* Radius */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* Z-Indices */
+  --z-below: -1;
+  --z-base: 1;
+  --z-nav: 100;
+  --z-mobile-menu: 110;
+  --z-floating: 120;
+  --z-modal: 150;
+  --z-toast: 200;
+}

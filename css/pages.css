@@ -1,0 +1,1100 @@
+/* ==========================================================================
+   ZEE EATERY — PAGE-SPECIFIC LAYOUTS & RESPONSIVE RULES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE: SECTION 1 — CINEMATIC FULL-WIDTH HERO SECTION
+   Matches the reference screenshot: single cinematic composition with
+   headline, supporting text and CTA on the LEFT, and the woman dining
+   naturally integrated on the RIGHT side of the background.
+   No separate framed card.
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--navbar-height) + 3rem);
+  padding-bottom: clamp(4rem, 8vw, 6.5rem);
+  background-color: var(--color-espresso);
+  overflow: hidden;
+}
+
+.hero-cinematic-bg {
+  background-image: url('../assets/images/hero-woman-dining.png');
+  background-size: cover;
+  background-position: right 18% center;
+  background-repeat: no-repeat;
+}
+
+/* Dark gradient overlay: guarantees perfect readability for left-aligned text
+   while allowing the woman dining on the right to remain luminous and natural */
+.hero-cinematic-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: 
+    linear-gradient(to right, 
+      rgba(16, 10, 7, 0.96) 0%, 
+      rgba(16, 10, 7, 0.90) 32%, 
+      rgba(16, 10, 7, 0.65) 50%, 
+      rgba(16, 10, 7, 0.25) 72%, 
+      rgba(16, 10, 7, 0.15) 100%
+    ),
+    linear-gradient(to top, 
+      rgba(16, 10, 7, 0.92) 0%, 
+      transparent 22%
+    ),
+    linear-gradient(to bottom, 
+      rgba(16, 10, 7, 0.85) 0%, 
+      transparent 18%
+    );
+  z-index: 1;
+}
+
+.hero-cinematic-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero-headline {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-warm-ivory);
+  font-size: clamp(2.8rem, 5.2vw, 4.4rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-headline em {
+  font-style: italic;
+  font-family: var(--font-serif);
+  color: var(--color-champagne-gold);
+}
+
+.hero-description {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  color: var(--color-muted-sand);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE: SECTION 2 — RESTAURANT INTRODUCTION
+   -------------------------------------------------------------------------- */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2.5rem, 5vw, 5.5rem);
+}
+
+.intro-visual {
+  position: relative;
+}
+
+.intro-image {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-gold-border);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.intro-accent-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background: rgba(36, 19, 12, 0.95);
+  border: 1px solid var(--color-antique-gold);
+  padding: 1.25rem 1.75rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(8px);
+}
+
+.intro-accent-badge span {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--color-champagne-gold);
+  line-height: 1;
+}
+
+.intro-accent-badge small {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted-sand);
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE: SECTION 3 — SIGNATURE DISHES (STRICTLY 2 ITEMS)
+   -------------------------------------------------------------------------- */
+.signature-dishes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.signature-dish-card {
+  background: var(--bg-card-dark);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: all var(--transition-medium);
+  display: flex;
+  flex-direction: column;
+}
+
+.signature-dish-card:hover {
+  border-color: var(--color-gold-border-bright);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card), var(--shadow-gold-glow);
+}
+
+.signature-dish-img-box {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+}
+
+.signature-dish-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.signature-dish-card:hover .signature-dish-img-box img {
+  transform: scale(1.05);
+}
+
+.signature-dish-info {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dish-badge {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-champagne-gold);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.dish-title {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  color: var(--color-warm-ivory);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.dish-desc {
+  font-size: 0.98rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE: SECTION 4 — DINING EXPERIENCE
+   -------------------------------------------------------------------------- */
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2.5rem, 5vw, 5.5rem);
+}
+
+.experience-content {
+  padding-right: 1rem;
+}
+
+.experience-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.experience-item {
+  border-left: 2px solid var(--color-antique-gold);
+  padding-left: 1rem;
+}
+
+.experience-item h4 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-warm-ivory);
+  margin-bottom: 0.35rem;
+}
+
+.experience-item p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE: SECTION 5 — SERVICES PREVIEW (2 FEATURED CARDS)
+   Balanced two-column luxury cards with centered alignment and generous spacing.
+   -------------------------------------------------------------------------- */
+.services-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 960px;
+  margin: 3rem auto 3.5rem;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.service-preview-card {
+  background: var(--bg-card-dark);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: all var(--transition-medium);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-preview-card:hover {
+  border-color: var(--color-champagne-gold);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+}
+
+.service-preview-img-box {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-preview-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-preview-card:hover .service-preview-img-box img {
+  transform: scale(1.08);
+}
+
+.service-preview-body {
+  padding: 1.85rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-preview-body h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-preview-body p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE: SECTION 6 — RESTAURANT ATMOSPHERE (EDITORIAL MOSAIC)
+   -------------------------------------------------------------------------- */
+.atmosphere-mosaic {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 1fr;
+  gap: 1.75rem;
+  margin-top: 3rem;
+  align-items: stretch;
+}
+
+.atmosphere-card {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-border);
+  height: 420px;
+}
+
+.atmosphere-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.atmosphere-card:hover img {
+  transform: scale(1.05);
+}
+
+.atmosphere-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(16, 10, 7, 0.8) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.75rem;
+}
+
+.atmosphere-overlay span {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-warm-ivory);
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE: SECTION 7 — GALLERY PREVIEW (STRICTLY 2 IMAGES)
+   -------------------------------------------------------------------------- */
+.gallery-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.gallery-preview-card {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-border);
+  height: 380px;
+  position: relative;
+}
+
+.gallery-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-preview-card:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-preview-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(16, 10, 7, 0.85) 100%);
+  color: var(--color-warm-ivory);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE: SECTION 8 — TESTIMONIALS (WARM IVORY CONTRAST SECTION)
+   -------------------------------------------------------------------------- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  background: #EFE7D8;
+  border: 1px solid rgba(196, 154, 69, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: all var(--transition-fast);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-quote-icon {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: var(--color-antique-gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #2D1B12;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(196, 154, 69, 0.25);
+  padding-top: 1rem;
+}
+
+.testimonial-author-name {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1A0E08;
+}
+
+.testimonial-author-tag {
+  font-size: 0.75rem;
+  color: #7D6B5D;
+}
+
+/* --------------------------------------------------------------------------
+   HOMEPAGE: SECTION 9 — RESERVATION CALL TO ACTION
+   -------------------------------------------------------------------------- */
+.cta-banner-section {
+  position: relative;
+  background-color: var(--color-rich-brown);
+  border-top: 1px solid var(--color-gold-border);
+  border-bottom: 1px solid var(--color-gold-border);
+  text-align: center;
+}
+
+.cta-banner-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-banner-content h2 {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  margin-bottom: 1rem;
+}
+
+.cta-banner-content p {
+  font-size: 1.15rem;
+  color: var(--color-muted-sand);
+  margin-bottom: 2.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   PAGE HERO (ABOUT, SERVICES, GALLERY, CONTACT)
+   -------------------------------------------------------------------------- */
+.page-hero {
+  position: relative;
+  padding-top: calc(var(--navbar-height) + 4rem);
+  padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  background-color: var(--color-espresso);
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-gold-border);
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.1);
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(16, 10, 7, 0.4) 0%, rgba(16, 10, 7, 0.95) 90%);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-hero-content h1 {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  margin-bottom: 1.25rem;
+}
+
+.page-hero-content p {
+  font-size: 1.18rem;
+  color: var(--color-muted-sand);
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   ABOUT US: SECTION 2 — MEET THE OWNER
+   -------------------------------------------------------------------------- */
+.owner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+}
+
+.owner-portrait-box {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+}
+
+.owner-portrait-box img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+}
+
+.owner-title-badge {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-gold-border);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.owner-sig {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--color-champagne-gold);
+  font-style: italic;
+}
+
+.owner-role {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted-sand);
+}
+
+.owner-story-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--color-text-body);
+}
+
+/* --------------------------------------------------------------------------
+   ABOUT US: SECTION 3 — PHILOSOPHY (3 CONTENT BLOCKS - TEXT-ONLY LUXURY LAYOUT)
+   -------------------------------------------------------------------------- */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+  margin-top: 3.5rem;
+}
+
+.philosophy-card-textonly {
+  background: var(--bg-card-dark);
+  border: 1px solid var(--color-gold-border);
+  border-top: 2px solid var(--color-antique-gold);
+  border-radius: var(--radius-sm);
+  padding: 3rem 2.25rem;
+  text-align: left;
+  transition: all var(--transition-medium);
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophy-card-textonly:hover {
+  border-color: var(--color-champagne-gold);
+  border-top-color: var(--color-champagne-gold);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card), var(--shadow-gold-glow);
+}
+
+.philosophy-card-textonly .philosophy-num {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  color: var(--color-antique-gold);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.philosophy-card-textonly h3 {
+  font-size: 1.75rem;
+  color: var(--color-warm-ivory);
+  margin-bottom: 0.75rem;
+}
+
+.philosophy-rule {
+  width: 36px;
+  height: 1px;
+  background: var(--color-antique-gold);
+  margin-bottom: 1.25rem;
+  opacity: 0.6;
+}
+
+.philosophy-card-textonly p {
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* --------------------------------------------------------------------------
+   ABOUT US: SECTION 4 — CULINARY INSPIRATION
+   -------------------------------------------------------------------------- */
+.inspiration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.inspiration-item {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-border);
+  height: 380px;
+}
+
+.inspiration-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.inspiration-item:hover img {
+  transform: scale(1.06);
+}
+
+.inspiration-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.75rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(16, 10, 7, 0.9) 100%);
+}
+
+.inspiration-caption h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.inspiration-caption p {
+  font-size: 0.88rem;
+  color: var(--color-muted-sand);
+}
+
+/* --------------------------------------------------------------------------
+   OUR SERVICES PAGE: 8 DETAILED SERVICE SECTIONS
+   -------------------------------------------------------------------------- */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+.service-row.reverse {
+  direction: rtl;
+}
+
+.service-row.reverse > * {
+  direction: ltr;
+}
+
+.service-media {
+  position: relative;
+  height: 440px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-border);
+  box-shadow: var(--shadow-card);
+}
+
+.service-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-row:hover .service-media img {
+  transform: scale(1.04);
+}
+
+.service-number {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: var(--color-antique-gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.service-content h3 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 1.25rem;
+}
+
+.service-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-muted-sand);
+  margin-bottom: 1.75rem;
+}
+
+.service-features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.service-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--color-warm-ivory);
+}
+
+.service-feature svg {
+  color: var(--color-champagne-gold);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   CONTACT US: CONTACT & RESERVATION FORMS
+   -------------------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.contact-info-card {
+  background: var(--bg-card-dark);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-sm);
+  padding: 2.75rem;
+}
+
+.contact-info-block {
+  margin-bottom: 2rem;
+}
+
+.contact-info-block:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-champagne-gold);
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-value {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-warm-ivory);
+}
+
+.contact-info-value a {
+  color: var(--color-warm-ivory);
+  transition: color var(--transition-fast);
+}
+
+.contact-info-value a:hover {
+  color: var(--color-champagne-gold);
+}
+
+.contact-info-note {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.contact-form-box {
+  background: var(--bg-card-dark);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-sm);
+  padding: 3rem clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Location Map Placeholder */
+.location-showcase {
+  margin-top: 5rem;
+  background: var(--color-rich-brown);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-sm);
+  padding: 3.5rem clamp(1.5rem, 4vw, 3.5rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.map-placeholder-box {
+  height: 320px;
+  background: #150D09;
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(196, 154, 69, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.map-pin-emblem {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid var(--color-antique-gold);
+  background: rgba(36, 19, 12, 0.9);
+  color: var(--color-champagne-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgba(196, 154, 69, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .services-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .atmosphere-mosaic {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .atmosphere-card:nth-child(3) {
+    grid-column: span 2;
+    height: 320px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .footer-top > *:last-child {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-menu,
+  .nav-actions .btn-gold {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--navbar-height) + 2rem);
+    padding-bottom: 4rem;
+  }
+
+  .hero-cinematic-bg {
+    background-position: 70% center;
+  }
+
+  .hero-cinematic-bg::before {
+    background: 
+      linear-gradient(to right, 
+        rgba(16, 10, 7, 0.95) 0%, 
+        rgba(16, 10, 7, 0.88) 55%, 
+        rgba(16, 10, 7, 0.45) 100%
+      ),
+      linear-gradient(to top, 
+        rgba(16, 10, 7, 0.95) 0%, 
+        transparent 28%
+      ),
+      linear-gradient(to bottom, 
+        rgba(16, 10, 7, 0.88) 0%, 
+        transparent 20%
+      );
+  }
+
+  .hero-content {
+    max-width: 540px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .hero-cta-group {
+    justify-content: flex-start;
+  }
+
+  .services-preview-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .intro-grid,
+  .experience-grid,
+  .owner-grid,
+  .service-row,
+  .contact-grid,
+  .location-showcase {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .service-row.reverse {
+    direction: ltr;
+  }
+
+  .signature-dishes-grid,
+  .gallery-preview-grid,
+  .testimonials-grid,
+  .philosophy-grid,
+  .inspiration-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .luxury-form {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-top > *:last-child {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .section {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .hero-headline {
+    font-size: 2.4rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atmosphere-mosaic {
+    grid-template-columns: 1fr;
+  }
+
+  .atmosphere-card:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  .whatsapp-float-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .whatsapp-float-icon-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-tooltip {
+    display: none;
+  }
+}
